@@ -1,3 +1,43 @@
+#' @title irts
+#'
+#' @description Computes a two dimensional trace surface
+#'
+#' @param theta_gen
+#' theta values for the general dimension
+#'
+#' @param theta_spec
+#' theta values for the specific dimension
+#'
+#' @param a_gen
+#' descrimination parameter for the general dimension
+#'
+#' @param a_spec
+#' descrimination parameter for the specific dimension(s)
+#'
+#' @param c
+#' item threshold paramater
+#'
+#' @param ic_index
+#' Numeric vector that delineates the correspondence between item and
+#' item cluster.
+#'
+#' @param nr
+#' number of possible response options
+#'
+#' @return ts_ic
+#'
+#' @examples
+#' example_ts <- comp_ts(theta_gen = c(-2,-1,0,1,2),
+#' theta_spec = c(-2,-1,0,1,2),
+#' a_gen = c(1.2,1.2,1,1,.8,.8),
+#' a_spec = c(1,1,.8,.8,1.2,1.2),
+#' c = c(-1,-.6,-.2,.2,.6,1),
+#' ic_index = c(1,1,2,2,3,3),
+#' nr = 2)
+#'
+#' @export lw_2
+
+
 lw_2 <- function(n_quad, theta_min, theta_max,
                  a_gen,
                  a_spec,
