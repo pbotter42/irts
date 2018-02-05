@@ -29,4 +29,5 @@ quad_gen <- function(n_quad, theta_min, theta_max) {
   q_points <- seq(from = theta_min, to = theta_max,
                   by = (theta_max-theta_min)/(n_quad-1))
   return(q_points)
+  
 }
