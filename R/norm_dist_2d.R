@@ -23,4 +23,5 @@ norm_dist_2d <- function(theta_gen, theta_spec) {
   }
   dist_m <- dist_m/sum(dist_m)
   return(dist_m)
+  
 }
