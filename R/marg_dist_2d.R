@@ -10,7 +10,7 @@
 #'
 #' @return q_points
 #'
-#' @examples quad_gen(n_quad=21,theta_min=-5, theta_max=5)
+#' @examples marg_dist_2d(norm_dist_2d_obj)
 #'
 #' @export marg_dist_2d
 #'
