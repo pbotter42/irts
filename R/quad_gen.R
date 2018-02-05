@@ -10,7 +10,7 @@
 #'
 #' @return q_points
 #'
-#' @examples quad_gen(n_quad=21, theta_min=-5, theta_max=5)
+#' @examples 
 #'
 #' @export quad_gen
 
