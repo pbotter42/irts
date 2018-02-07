@@ -24,7 +24,7 @@ quad_gen <- function(n_quad, theta_min, theta_max) {
          are proportional.")
   }
   if((n_quad %% 2) != 1) {
-    warning("An odd number of quadriture points was not provided.")
+    warning("An odd number of quadrature points was not provided.")
   }
   q_points <- seq(from = theta_min, to = theta_max,
                   by = (theta_max-theta_min)/(n_quad-1))
