@@ -3,11 +3,14 @@
 #' @description This package computes the original Lord-Wingersky Algorithm for unidimensional IRT models, as well as the Lord-Wingersky Algorithm 2.0.
 #'
 #' @param n_quad
-#'
+#' Number of quadrature  points to generate 
+#' 
 #' @param theta_max
-#'
+#' the maximum quadrature value
+#' 
 #' @param theta_min
-#'
+#' the minimum quadrature value
+#' 
 #' @return q_points
 #'
 #' @examples quad_gen(n_quad=21, theta_min=-5, theta_max=5)
