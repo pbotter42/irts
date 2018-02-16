@@ -54,7 +54,7 @@
 #'
 #' @export lw_2
 
-funLW2 <- function(n_quad,
+lw_2 <- function(n_quad,
                    theta_min,
                    theta_max,
                    item_params,
