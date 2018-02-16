@@ -63,7 +63,7 @@ lw_2 <- function(n_quad,
   theta_spec <- quad_gen(n_quad,theta_min,theta_max)
   dist_2d <- norm_dist_2d(theta_gen, theta_spec)  
   marg_2d <- marg_dist_2d(dist_2d)  
-  ts_list <- comp_ts2(theta_gen = theta_gen,   
+  ts_list <- comp_ts(theta_gen = theta_gen,   
                       theta_spec = theta_spec,   
                       item_params = item_params,   
                       ic_index = ic_index)
@@ -110,7 +110,6 @@ lw_2 <- function(n_quad,
     }  
     lw_final_iter[[k]] <- lw_iter[[k]][[length(lw_iter[[k]])]]
   } 
-  lw_final_iter_12 <- lw_final_iter
   temp <- list()
   # looping over lw_final_iter to get temp[[k]][[2]] to contain unique sum scores  
   for(k in 1:length(lw_final_iter)) {  
@@ -208,6 +207,6 @@ lw_2 <- function(n_quad,
   lw2.0_Lik_SS <- cbind(lw2.0_Lik, lw2.0_SS) # contains the lik and SS  
   lw2.0_Lik_SS <- as.data.frame(lw2.0_Lik_SS)  
   aggregated_SS <- aggregate(.~lw2.0_SS, lw2.0_Lik_SS, sum)  
-  
-  return(aggregated_SS)
+  colnames(aggregated_SS)[1] <- "Sum Score"
+   return(aggregated_SS)
 }  
