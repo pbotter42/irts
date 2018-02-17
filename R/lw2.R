@@ -5,11 +5,8 @@
 #' @param n_quad
 #' @param theta_min
 #' @param theta_max
-#' @param a_gen
-#' @param a_spec
-#' @param c
+#' @param item_params
 #' @param ic_index
-#' @param nr
 #' 
 #' @return aggregated_SS
 #'
@@ -46,7 +43,7 @@
 #'item_params[[6]][["thr"]] <- list()   
 #'item_params[[6]][["thr"]] <- c(1)   
 #'
-#'example_lw2 <- lw2(nquad = 5,   
+#'example_lw2 <- lw2(n_quad = 5,   
 #'                        theta_min = -2,
 #'                        theta_max = 2,   
 #'                        item_params = item_params,   
