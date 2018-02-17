@@ -51,7 +51,7 @@
 #'item_params[[6]]["slope_spec"] <- 1.2   
 #'item_params[[6]][["thr"]] <- list()   
 #'item_params[[6]][["thr"]] <- c(1)   
-#'example_ts <- comp_ts2(theta_gen = c(-1,0,1),   
+#'example_ts <- comp_ts(theta_gen = c(-1,0,1),   
 #'                        theta_spec = c(-1,0,1),   
 #'                        item_params = item_params,   
 #'                        ic_index = ic_index <- c(1,1,2,2,3,3)) 
