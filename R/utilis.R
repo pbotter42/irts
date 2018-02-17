@@ -104,3 +104,16 @@ comp_ts <- function(theta_gen,
   }   
   return(ts_ic)   
 }
+
+normal_distribution <- function(n_quad,
+                                theta_min,
+                                theta_max) {
+  q_points <- seq(from = theta_min,
+                  to = theta_max,
+                  by = (theta_max-theta_min)/(n_quad-1))
+  
+  dist_m <- exp(-(q_points^2)/2)
+  dist_m <- dist_m/sum(dist_m)
+  return(dist_m)
+  
+}
