@@ -55,7 +55,17 @@ lw2 <- function(n_quad,
                    theta_min,
                    theta_max,
                    item_params,
-                   ic_index) {  
+                   ic_index) { 
+  if(theta_max <= 0 |
+     theta_min >= 0 |
+     theta_max/theta_min != -1) {
+    stop("Improper theta_min and or theta_max values are
+         provided. Ensure values have the proper sign and
+         are proportional.")
+  }
+  if((n_quad %% 2) != 1) {
+    warning("An odd number of quadrature points was not provided.")
+  }
   theta_gen <- quad_gen(n_quad,theta_min,theta_max)
   theta_spec <- quad_gen(n_quad,theta_min,theta_max)
   dist_2d <- norm_dist_2d(theta_gen, theta_spec)  

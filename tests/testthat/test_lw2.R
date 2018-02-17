@@ -54,3 +54,13 @@ test_that("lw2 produces the correct estimates", {
                c("Sum Score", "Quad point 1", "Quad point 2",
                  "Quad point 3", "Quad point 4", "Quad point 5"))
 })
+
+test_that("lw2 produces correct errors", { 
+  expect_warning(lw2(n_quad = 6,   
+                     theta_min = -2,
+                     theta_max = 2,   
+                     item_params = item_params,   
+                     ic_index = ic_index <- c(1,1,2,2,3,3)), 
+                 "An odd number of quadrature points was not provided.") 
+  
+}) 
