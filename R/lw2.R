@@ -43,11 +43,11 @@
 #'item_params[[6]][["thr"]] <- list()   
 #'item_params[[6]][["thr"]] <- c(1)   
 #'
-#'example_lw2 <- lw2(n_quad = 5,   
+#'example1 <- lw2(n_quad = 5,   
 #'                        theta_min = -2,
 #'                        theta_max = 2,   
 #'                        item_params = item_params,   
-#'                        ic_index = ic_index <- c(1,1,2,2,3,3))
+#'                        ic_index = c(1,1,2,2,3,3))
 #'
 #' @export lw2
 
