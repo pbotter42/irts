@@ -1,13 +1,14 @@
 Package: irts
 Type: Package
-Title: An R implementation of the Lord-Wingersky algorithm(s).
+Title: IRT scoring.
 Version: 0.1.0
 Author: Preston Botter
 Maintainer: Preston Botter <pdbotter@gmail.com>
-Description: This package computes the original Lord-Wingersky
-    Algorithm for unidimensional IRT models, as well as the 
-    Lord-Wingersky Algorithm 2.0.
+Description: Computes the original Lord-Wingersky
+    algorithm (Lord and Wingersky, 1984) for unidimensional IRT models,
+    as well as the Lord-Wingersky algorithm 2.0 (Cai, 2015).
 Encoding: UTF-8
 LazyData: true
 Suggests: testthat
 Lisense: This package is free and open source software, licensed under GPL (>= 3).
+RoxygenNote: 6.0.1
