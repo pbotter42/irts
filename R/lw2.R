@@ -8,7 +8,7 @@
 #' @param item_params
 #' @param ic_index
 #' 
-#' @return aggregated_SS
+#' @return ourt
 #'
 #' @examples
 #'item_params <- list()   
@@ -52,10 +52,10 @@
 #' @export lw2
 
 lw2 <- function(n_quad,
-                   theta_min,
-                   theta_max,
-                   item_params,
-                   ic_index) { 
+                  theta_min,
+                  theta_max,
+                  item_params,
+                  ic_index) { 
   if(theta_max <= 0 |
      theta_min >= 0 |
      theta_max/theta_min != -1) {
@@ -71,9 +71,9 @@ lw2 <- function(n_quad,
   dist_2d <- norm_dist_2d(theta_gen, theta_spec)  
   marg_2d <- marg_dist_2d(dist_2d)  
   ts_list <- comp_ts(theta_gen = theta_gen,   
-                      theta_spec = theta_spec,   
-                      item_params = item_params,   
-                      ic_index = ic_index)
+                     theta_spec = theta_spec,   
+                     item_params = item_params,   
+                     ic_index = ic_index)
   
   ts_score <- list() # esentually the same as ts_list, just has the scores added 
   lw_iter <- list()  
@@ -215,5 +215,13 @@ lw2 <- function(n_quad,
   lw2.0_Lik_SS <- as.data.frame(lw2.0_Lik_SS)  
   aggregated_SS <- aggregate(.~lw2.0_SS, lw2.0_Lik_SS, sum)  
   colnames(aggregated_SS)[1] <- "Sum Score"
-   return(aggregated_SS)
-}  
+  
+  # createing list for final output
+  out <- list()
+  
+  out[["Sum Scores"]] <- as.matrix(aggregated_SS)
+  out[["theta"]] <- theta_gen
+  class(out) <- append(class(out),
+                       "irts")
+  return(out)
+  }  
