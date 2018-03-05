@@ -8,7 +8,7 @@
 #' @param item_params
 #' @param ic_index
 #' 
-#' @return ourt
+#' @return out
 #'
 #' @examples
 #'item_params <- list()   
@@ -225,3 +225,5 @@ lw2 <- function(n_quad,
                        "irts")
   return(out)
   }  
+
+
