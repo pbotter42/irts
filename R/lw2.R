@@ -1,6 +1,6 @@
-#' @title irts
+#' @title bi-factor irt scoring 
 #'
-#' @description This package computes the original Lord-Wingersky Algorithm for unidimensional IRT models, as well as the Lord-Wingersky Algorithm 2.0.
+#' @description This package computes the original Lord-Wingersky Algorithm for unidimensional IRT models, as well as the Lord-Wingersky Algorithm 2.0(Cai, 2015).
 #'
 #' @param n_quad
 #' @param theta_min
