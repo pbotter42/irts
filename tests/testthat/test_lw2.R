@@ -36,7 +36,7 @@ example_lw2_rounded <- round(lw2(n_quad = 5,
                     theta_min = -2,
                     theta_max = 2,   
                     item_params = item_params,   
-                    ic_index = ic_index <- c(1,1,2,2,3,3)),
+                    ic_index = ic_index <- c(1,1,2,2,3,3))[["Sum Scores"]],
                     digits = 5)
 
 test_that("lw2 produces the correct estimates", {
