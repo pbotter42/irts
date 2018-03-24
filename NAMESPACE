@@ -1,5 +1,3 @@
-export(normal_distribution)
-export(norm_dist_2d)
-export(quad_gen)
-export(marg_dist_2d)
-export(comp_ts)
+export(lw2)
+export(plot.irts)
+export(print.irts)
